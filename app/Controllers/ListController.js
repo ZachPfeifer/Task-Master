@@ -23,20 +23,25 @@ export default class ListController {
         //NOTE: After updating the store, we can automatically call to draw the lists.
         _drawLists();
     }
+    //TODO: Your app will need the ability to create, and delete both lists and listItems
     addList(event) {
         event.preventDefault()
         let form = event.target
         let newList = {
             title: form.title.value //FIXME Potiental Problem
         }
+        _listService.addList(newList)
+        _drawLists()
     }
     addtoDo(event, listIndex) {
         event.preventDefault()
         let form = event.target
         let newtoDo = form.toDo.value
         _listService.addtoDo(newtoDo, listIndex)
+        _drawLists()
+    }
+    deleteList(index) {
+        _listService.deleteList(index)
         _drawLists
     }
-
-    //TODO: Your app will need the ability to create, and delete both lists and listItems
 }

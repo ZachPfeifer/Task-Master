@@ -11,6 +11,11 @@ let _state = {
 
 //Public
 export default class ListService {
+    deleteList(index) {
+        _state.lists.splice(index, 1)
+        //Old Saved
+        this.getLists()
+    }
 
     addtoDo(newtoDo, listIndex) {
         _state.lists[listIndex].toDo.push(newtoDo)

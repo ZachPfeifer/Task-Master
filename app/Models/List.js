@@ -11,7 +11,6 @@ export default class List {
             <div class="col-4">
             <h1>${this.title}</h1>
             <h3>${this.toDo}</h3>
-            <ul>
             `
         return template
     }
