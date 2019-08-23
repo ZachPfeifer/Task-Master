@@ -2,12 +2,36 @@ import List from "../models/List.js";
 
 //Private
 let _state = {
-    lists: []
+    lists: [new List({
+        title: "Cleaning List",
+        toDo: ["Clean Bathroom", "Clean Garage", "Clean Bedroom"],
+    })]
 }
 
 
 //Public
-export default class ValuesService {
+export default class ListService {
+
+    addtoDo(newtoDo, listIndex) {
+        _state.lists[listIndex].toDo.push(newtoDo)
+        //FIXME need reload draw
+        this.getLists()
+
+    }
+    addList(newList) {
+        _state.lists.push(new List(newList))
+        //Old saved
+        this.getLists()
+    }
+
+    get List() {
+        return _state.lists.map(list => new List(list))
+    }
+    constructor() {
+        console.log('Service Checking-in');
+        // this.List = undefined;
+    }
+
     //TODO  Here is where we handle all of our data manipulation, 
     //given the information you need in the controller, 
     //what methods will be required to support that functionality?
