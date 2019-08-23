@@ -42,6 +42,10 @@ export default class ListController {
     }
     deleteList(index) {
         _listService.deleteList(index)
-        _drawLists
+        _drawLists()
+    }
+    deletetoDo(listIndex, toDoIndex) {
+        _listService.deletetoDo(listIndex, toDoIndex)
+        _drawLists()
     }
 }
