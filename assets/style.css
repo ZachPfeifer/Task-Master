@@ -1,12 +1,31 @@
 html{
-  background: url(https://www.austockphoto.com.au/imgcache/uploads/photos/compressed/background-of-a-crumpled-paper-bag-austockphoto-000008598.JPG?v=1.2.9
-);
+background: url(https://www.austockphoto.com.au/imgcache/uploads/photos/compressed/background-of-a-crumpled-paper-bag-austockphoto-000008598.JPG?v=1.2.9);
+background-size: cover;
+background-repeat: no-repeat;
+}
+
+.bg-img{
+background: url(https://www.austockphoto.com.au/imgcache/uploads/photos/compressed/background-of-a-crumpled-paper-bag-austockphoto-000008598.JPG?v=1.2.9);
+background-repeat: no-repeat;
 background-size: cover;
 }
-.bg-img{
-background: url(https://www.austockphoto.com.au/imgcache/uploads/photos/compressed/background-of-a-crumpled-paper-bag-austockphoto-000008598.JPG?v=1.2.9
-)
+
+.list-bg{
+background: #FFFF99;
+background-repeat: no-repeat;
+background-size: cover;
+text-align: left;
+
 }
 .redx{
-  color: brown;
+color: brown;
 cursor: pointer;}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 50px;

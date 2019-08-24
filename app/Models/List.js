@@ -8,7 +8,7 @@ export default class List {
     }
     getTemplate(index) {
         let template = `
-            <div class="col-4">
+            <div class="col-4 list-bg">
             <h1>${this.name}</h1>
             <hr>
                 <h3><b>Things to Do:</b></3>
