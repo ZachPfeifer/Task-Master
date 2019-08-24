@@ -6,11 +6,11 @@ let _listService = new ListService()
 //TODO Don't forget to render to the screen after every data change.
 function _drawLists() {
     let template = ``
-    let list = _listService.List
-    list.forEach((list, index) => {
+    let lists = _listService.List
+    lists.forEach((list, index) => {
         template += list.getTemplate(index)
     })
-    document.querySelector('#list').innerHTML = template
+    document.querySelector('#todoList').innerHTML = template
 }
 
 
@@ -28,7 +28,7 @@ export default class ListController {
         event.preventDefault()
         let form = event.target
         let newList = {
-            title: form.title.value //FIXME Potiental Problem
+            name: form.name.value //FIXME Potiental Problem
         }
         _listService.addList(newList)
         _drawLists()

@@ -13,17 +13,16 @@
 
 <body>
 
-    <!--Copied Code from Pizza-->
     <div class="container-fluid bg-img">
         <form onsubmit="app.controllers.listController.addList(event)">
             <div class="form-group">
                 <label for="name">Title</label>
-                <input type="text" class="form-control" name="name" placeholder="List Title" required>
+                <input type="text" class="form-control" id="title" name="name" placeholder="List Title" required>
             </div>
             <button class="btn btn-dark" type="submit">Submit</button>
         </form>
+        <div id="todoList" class="row">
 
-        <div id="list" class="row">
 
         </div>
     </div>

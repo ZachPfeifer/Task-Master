@@ -3,8 +3,8 @@ import List from "../models/List.js";
 //Private
 let _state = {
     lists: [new List({
-        title: "Cleaning List",
-        toDo: ["Clean Bathroom", "Clean Garage", "Clean Bedroom"],
+        name: "Cleaning List",
+        toDo: [],
     })]
 }
 
@@ -12,26 +12,30 @@ let _state = {
 //Public
 export default class ListService {
     deletetoDo(listIndex, toDoIndex) {
-        _state.lists[listIndex].toDo.splice(toDoIndex, 1)
+        if (window.confirm('Are you Sure you want to delete?')) {
+            _state.lists[listIndex].toDo.splice(toDoIndex, 1)
+        }
         //Old Saved
-        this.getLists()
+        this.saveLists()
     }
     deleteList(index) {
-        _state.lists.splice(index, 1)
+        if (window.confirm('Are you Sure you want to delete?')) {
+            _state.lists.splice(index, 1)
+        }
         //Old Saved
-        this.getLists()
+        this.saveLists()
     }
 
     addtoDo(newtoDo, listIndex) {
         _state.lists[listIndex].toDo.push(newtoDo)
         //FIXME need reload draw
-        this.getLists()
+        this.saveLists()
 
     }
     addList(newList) {
         _state.lists.push(new List(newList))
         //Old saved
-        this.getLists()
+        this.saveLists()
     }
 
     get List() {
