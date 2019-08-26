@@ -43,6 +43,8 @@ export default class ListService {
     get List() {
         return _state.lists.map(list => new List(list))
     }
+
+
     constructor() {
         console.log('Service Checking-in');
         // this.List = undefined;

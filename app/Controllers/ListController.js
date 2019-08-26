@@ -13,6 +13,17 @@ function _drawLists() {
     document.querySelector('#todoList').innerHTML = template
 }
 
+//FIXME  Color Picker 
+function colorPicker() {
+    let colorID = document.getElementById('#colorID').value;
+    document.getElementById('put').value = colorID
+
+    document.getElementById("list-bg").style.backgroundColor = colorID;
+    _drawLists();
+}
+
+//take 2
+
 
 //Public
 export default class ListController {

@@ -18,6 +18,10 @@
             <div class="form-group">
                 <label for="name"><b>Title of List</b></label>
                 <input type="text" class="form-control" id="title" name="name" placeholder="List Title" required>
+                <!--FIXME Input color-->
+                <label for="Color"><b>Pick a Color of To Do List</b></label>
+                <input type="color" id="colorID" onchange="colorPicker()">
+                <input type="text" id="put">
 
             </div>
             <button class="btn btn-dark" type="submit">Submit</button>
