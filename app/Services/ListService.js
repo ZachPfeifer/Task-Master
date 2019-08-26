@@ -13,6 +13,9 @@ let _state = {
 
 //Public
 export default class ListService {
+    //FIXME SWAL Trial
+
+
     deletetoDo(listIndex, toDoIndex) {
         if (window.confirm('Are you Sure you want to delete?')) {
             _state.lists[listIndex].toDo.splice(toDoIndex, 1)

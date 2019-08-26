@@ -14,15 +14,18 @@ function _drawLists() {
 }
 
 //FIXME  Color Picker 
-function colorPicker() {
-    let colorID = document.getElementById('#colorID').value;
-    document.getElementById('put').value = colorID
-
-    document.getElementById("list-bg").style.backgroundColor = colorID;
-    _drawLists();
-}
+// function colorPicker() {
+//     let colorID = document.getElementById('#colorID').value;
+//     document.getElementById('put').value = colorID
+//     document.getElementById("list-bg").style.backgroundColor = colorID;
+// }
 
 //take 2
+// function colorPicker(event) {
+//     document.getElementById('div').forEach(function ('div') {
+//         div.style.color = event.target.value;
+//     });
+// }
 
 
 //Public

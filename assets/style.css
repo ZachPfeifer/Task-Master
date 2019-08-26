@@ -29,3 +29,9 @@ cursor: pointer;}
     margin-right: -15px;
     margin-left: -15px;
     margin-top: 50px;
+}
+input.largerCheckbox
+{
+    width: 22px;
+    height: 18px;
+}
