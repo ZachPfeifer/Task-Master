@@ -13,21 +13,64 @@ let _state = {
 
 //Public
 export default class ListService {
-    //FIXME SWAL Trial
 
 
-    deletetoDo(listIndex, toDoIndex) {
-        if (window.confirm('Are you Sure you want to delete?')) {
-            _state.lists[listIndex].toDo.splice(toDoIndex, 1)
-        }
-        //Old Saved
-        this.saveLists()
+    deletetoDo(listIndex, toDoIndex, callback) {
+        // if (window.confirm('Are you Sure you want to delete?')) {
+        //     _state.lists[listIndex].toDo.splice(toDoIndex, 1)
+        // }
+        //FIXME SWAL Trial
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    _state.lists[listIndex].toDo.splice(toDoIndex, 1)
+                    callback()
+                    //Old Saved
+                    this.saveLists()
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+
     }
-    deleteList(index) {
-        if (window.confirm('Are you Sure you want to delete?')) {
-            _state.lists.splice(index, 1)
-        }
-        //Old Saved
+    deleteList(index, callback) {
+
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this imaginary file!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    _state.lists.splice(index, 1)
+                    callback()
+                    //Old Saved
+                    this.saveLists()
+                    swal("Poof! Your imaginary file has been deleted!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("Your imaginary file is safe!");
+                }
+            });
+
+
+
+        // if (window.confirm('Are you Sure you want to delete?')) {
+        //     _state.lists.splice(index, 1)
+        // }
+        // //Old Saved
         this.saveLists()
     }
 
