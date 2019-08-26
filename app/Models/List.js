@@ -33,8 +33,8 @@ export default class List {
     getToDoTemplate(listIndex) {
         let toDoTemplate = ""
         this.toDo.forEach((td, toDoIndex) => {
-            toDoTemplate += `<li> ${td} <input type="checkbox" name="checkbox" class="largerCheckbox" value="toDo"><span class="redx" onclick="app.controllers.listController.deletetoDo(${listIndex}, 
-                ${toDoIndex})"> X </span></li>`
+            toDoTemplate += `<h4><input type="checkbox" name="crossOFF" class="strikethrough largerCheckbox" value="1"><span> ${td} </span><span class="redx" onclick="app.controllers.listController.deletetoDo(${listIndex}, 
+                ${toDoIndex})"> X </span></h4>`
         });
         return toDoTemplate
     }

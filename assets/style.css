@@ -35,3 +35,6 @@ input.largerCheckbox
     width: 22px;
     height: 18px;
 }
+.strikethrough:checked + span{
+  text-decoration:line-through
+}

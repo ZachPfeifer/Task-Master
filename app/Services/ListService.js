@@ -20,8 +20,9 @@ export default class ListService {
         //     _state.lists[listIndex].toDo.splice(toDoIndex, 1)
         // }
         //FIXME SWAL Trial
+        // @ts-ignore
         swal({
-            title: "Are you sure?",
+            title: "Are you sure you want to delete?",
             text: "Once deleted, you will not be able to recover this imaginary file!",
             icon: "warning",
             buttons: true,
@@ -33,10 +34,12 @@ export default class ListService {
                     callback()
                     //Old Saved
                     this.saveLists()
+                    // @ts-ignore
                     swal("Poof! Your imaginary file has been deleted!", {
                         icon: "success",
                     });
                 } else {
+                    // @ts-ignore
                     swal("Your imaginary file is safe!");
                 }
             });
@@ -44,8 +47,9 @@ export default class ListService {
     }
     deleteList(index, callback) {
 
+        // @ts-ignore
         swal({
-            title: "Are you sure?",
+            title: "Are you sure you want to delete?",
             text: "Once deleted, you will not be able to recover this imaginary file!",
             icon: "warning",
             buttons: true,
@@ -57,10 +61,12 @@ export default class ListService {
                     callback()
                     //Old Saved
                     this.saveLists()
+                    // @ts-ignore
                     swal("Poof! Your imaginary file has been deleted!", {
                         icon: "success",
                     });
                 } else {
+                    // @ts-ignore
                     swal("Your imaginary file is safe!");
                 }
             });
